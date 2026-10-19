@@ -1,0 +1,17 @@
+{
+  "domain": "sugarpixel",
+  "name": "SugarPixel",
+  "bluetooth": [
+    {
+      "local_name": "SugarPixel*"
+    }
+  ],
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": ["bluetooth"],
+  "documentation": "https://github.com/custom-components/sugarpixel",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "requirements": [],
+  "version": "0.7.4"
+}

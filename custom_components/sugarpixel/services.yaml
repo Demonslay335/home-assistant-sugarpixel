@@ -1,0 +1,48 @@
+snooze:
+  icon: mdi:alarm-snooze
+  name: Snooze alarms
+  description: Snooze one or all SugarPixel alarm types for a duration.
+  fields:
+    device_id:
+      name: SugarPixel
+      description: SugarPixel that should receive the snooze command.
+      required: true
+      selector:
+        device:
+          integration: sugarpixel
+    alarm:
+      name: Alarm type
+      description: Alarm type to snooze.
+      required: true
+      selector:
+        select:
+          options:
+            - label: Low
+              value: low
+            - label: High
+              value: high
+            - label: No data
+              value: no_data
+            - label: All alarms
+              value: all
+    duration:
+      name: Duration
+      description: How long the selected alarms should remain snoozed.
+      required: true
+      default:
+        minutes: 15
+      selector:
+        duration: {}
+
+clear_snoozes:
+  icon: mdi:alarm-off
+  name: Clear all snoozes
+  description: Clear every active remote snooze on a SugarPixel.
+  fields:
+    device_id:
+      name: SugarPixel
+      description: SugarPixel whose remote snoozes should be cleared.
+      required: true
+      selector:
+        device:
+          integration: sugarpixel

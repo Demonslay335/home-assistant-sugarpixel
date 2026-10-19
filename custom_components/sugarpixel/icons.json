@@ -1,0 +1,9 @@
+{
+  "entity": {
+    "update": {
+      "firmware": {
+        "default": "mdi:update"
+      }
+    }
+  }
+}

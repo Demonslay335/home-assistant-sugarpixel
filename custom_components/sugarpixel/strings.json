@@ -1,0 +1,108 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "This SugarPixel is already configured.",
+      "no_devices_found": "No connectable SugarPixel advertisements are currently visible.",
+      "no_local_adapters": "The SugarPixel is not currently visible to a local Bluetooth adapter.",
+      "no_supported_adapters": "The SugarPixel is not currently visible to a local adapter or a compatible ESPHome proxy.",
+      "not_connectable": "This advertisement was not received through a connectable Bluetooth adapter or proxy.",
+      "pairing_start_failed": "Could not start local Bluetooth pairing: {error}",
+      "reconfigure_successful": "Bluetooth adapter configuration updated."
+    },
+    "step": {
+      "confirm": {
+        "title": "Add {name}",
+        "description": "Add {name} ({address}) using Bluetooth?"
+      },
+      "user": {
+        "title": "Select a SugarPixel",
+        "data": {
+          "address": "SugarPixel"
+        }
+      },
+      "adapter": {
+        "title": "Select Bluetooth adapter",
+        "description": "Select the Bluetooth adapter or compatible ESPHome proxy that will pair with {name}.",
+        "data": {
+          "adapter_source": "Bluetooth adapter"
+        },
+        "data_description": {
+          "adapter_source": "The selected local adapter or proxy will store the Bluetooth bond and handle every connection."
+        }
+      },
+      "reconfigure": {
+        "title": "Configure {name}",
+        "description": "Choose the local Bluetooth adapter or ESPHome proxy assigned to this SugarPixel. Changing connection paths requires a new pairing code.",
+        "data": {
+          "adapter_source": "Bluetooth adapter",
+          "repair": "Remove the current bond and re-pair"
+        },
+        "data_description": {
+          "adapter_source": "The selected adapter or proxy will handle every SugarPixel connection.",
+          "repair": "Use this if the selected connection path reports authentication errors. This removes only its Home Assistant bond."
+        }
+      },
+      "reconfigure_pair": {
+        "title": "Re-pair {name}",
+        "description": "The SugarPixel should now display a unique six-digit code. Enter it here. {error}",
+        "data": {
+          "passkey": "Six-digit code"
+        },
+        "data_description": {
+          "passkey": "Enter the current code shown on the SugarPixel display."
+        }
+      },
+      "pair": {
+        "title": "Pair {name}",
+        "description": "The SugarPixel should now display a unique six-digit code. Enter it here. {error}",
+        "data": {"passkey": "Six-digit code"},
+        "data_description": {"passkey": "Enter the current code shown on the SugarPixel display."}
+      }
+    },
+    "error": {
+      "invalid_passkey": "Enter exactly six digits.",
+      "adapter_unavailable": "The selected adapter can no longer see this SugarPixel.",
+      "pairing_failed": "Pairing failed. Enter a newly displayed code and try again."
+    }
+  },
+  "entity": {
+    "button": {
+      "refresh": {"name": "Refresh"},
+      "snooze_low": {"name": "Snooze low"},
+      "snooze_high": {"name": "Snooze high"},
+      "snooze_no_data": {"name": "Snooze no data"},
+      "snooze_all": {"name": "Snooze all"},
+      "clear_snoozes": {"name": "Clear all snoozes"}
+    },
+    "select": {
+      "snooze_duration": {
+        "name": "Snooze duration",
+        "state": {
+          "15_minutes": "15 minutes",
+          "30_minutes": "30 minutes",
+          "1_hour": "1 hour",
+          "2_hours": "2 hours",
+          "6_hours": "6 hours",
+          "12_hours": "12 hours"
+        }
+      }
+    },
+    "update": {
+      "firmware": {"name": "Firmware update"}
+    },
+    "binary_sensor": {
+      "low_snoozed": {"name": "Low alarm snoozed"},
+      "high_snoozed": {"name": "High alarm snoozed"},
+      "no_data_snoozed": {"name": "No-data alarm snoozed"}
+    },
+    "sensor": {
+      "low_snooze_remaining": {"name": "Low snooze ends"},
+      "high_snooze_remaining": {"name": "High snooze ends"},
+      "no_data_snooze_remaining": {"name": "No-data snooze ends"},
+      "wifi_state": {"name": "Wi-Fi state"},
+      "firmware_version": {"name": "Firmware version"},
+      "setup_date": {"name": "Setup date"},
+      "last_read": {"name": "Last Bluetooth read"}
+    }
+  }
+}
